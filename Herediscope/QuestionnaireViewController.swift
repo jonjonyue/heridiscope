@@ -10,6 +10,8 @@ import UIKit
 
 class QuestionnaireViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+    var thePhenotype: Phenotype = Phenotype()
+    
     var pages = [UIViewController]()
     let pageControl = UIPageControl()
     
@@ -21,14 +23,11 @@ class QuestionnaireViewController: UIPageViewController, UIPageViewControllerDat
         let initialPage = 0
         
         
-        let page1 = ViewController1()
-        let page2 = ViewController1()
-        let page3 = ViewController1()
-        
-        // add the individual viewControllers to the pageViewController
-        self.pages.append(page1)
-        self.pages.append(page2)
-        self.pages.append(page3)
+        for question in thePhenotype.questions {
+            let temp: QuestionViewController = QuestionViewController()
+            temp.question = question
+            pages.append(temp)
+        }
         setViewControllers([pages[initialPage]], direction: .forward, animated: true, completion: nil)
         
         // pageControl

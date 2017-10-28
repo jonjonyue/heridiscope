@@ -14,6 +14,7 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var phenoTypeCache: [Phenotype] = []
     var filteredData: [Phenotype] = []
+    var index: Int = 0
     
     var isSearching = false
     
@@ -37,13 +38,14 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Making questionnaire")
+        index = indexPath.row
         performSegue(withIdentifier: "toQuestionnaire", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let viewController = segue.destination as? QuestionnaireViewController {
-//            viewController.recipient
-//        }
+        if let viewController = segue.destination as? QuestionnaireViewController {
+            viewController.thePhenotype = phenoTypeCache[index]
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -104,7 +106,7 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
                     default:
                         type = traitType.AutosomalDominant
                     }
-                    self.phenoTypeCache.append(Phenotype(name: name, description: description, result: Result(diagnosis: diagnosis, action: action), questions: questions, answered: answered, type: type))
+                    self.phenoTypeCache.append(Phenotype(n: name, d: description, r: Result(diagnosis: diagnosis, action: action), q: questions, a: answered, t: type))
                     print("Recording Data")
                     print(self.phenoTypeCache)
                 }
