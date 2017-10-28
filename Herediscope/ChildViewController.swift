@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-@IBOutlet weak var tableView: UITableView!
+class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!    
+    
     override func viewDidLoad() {
-
+        searchBar.isHidden = true;
+        searchBar.isUserInteractionEnabled = false;
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -42,6 +45,9 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell;
     }
     
+    @IBAction func searchPressed(_ sender: Any) {
+        
+    }
     
 }
 

@@ -8,13 +8,15 @@
 
 import UIKit
 
-class YourViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class YourViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var testArray: [String] = []
     
     override func viewDidLoad() {
-
+        searchBar.isHidden = true;
+        searchBar.isUserInteractionEnabled = false;
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("View Loaded")
@@ -71,5 +73,22 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
         print("Reloading Tableview")
         tableView.reloadData()
     }
+    
+    
+    
+    //MARK: Search Bar Delegate
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        
+    }
+    
+    //MARK: Actions
+    
+    @IBAction func searchPressed(_ sender: Any) {
+        
+        
+        
+    }
+    
+    
 }
 
