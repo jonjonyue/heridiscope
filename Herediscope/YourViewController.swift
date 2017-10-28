@@ -2,7 +2,7 @@
 //  YourViewController.swift
 //  Herediscope
 //
-//  Created by Jonathan yue on 10/27/17.
+//  Created by Jonathan yue on 10/27/17. 
 //  Copyright © 2017 Genesis. All rights reserved.
 //
 
