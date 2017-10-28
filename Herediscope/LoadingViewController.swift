@@ -14,11 +14,18 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animationView.animationImages = [#imageLiteral(resourceName: "load1"), #imageLiteral(resourceName: "load2"), #imageLiteral(resourceName: "load3")]
-        animationView.animationDuration = 0.5
+        let when = DispatchTime.now() + 5
+        
+        animationView.animationImages = [#imageLiteral(resourceName: "slide1"),#imageLiteral(resourceName: "slide1"),#imageLiteral(resourceName: "slide1"),#imageLiteral(resourceName: "slide1"),#imageLiteral(resourceName: "slide1"),#imageLiteral(resourceName: "slide1"),#imageLiteral(resourceName: "slide1"),#imageLiteral(resourceName: "slide1"),#imageLiteral(resourceName: "slide2"),#imageLiteral(resourceName: "slide3"),#imageLiteral(resourceName: "slide4"),#imageLiteral(resourceName: "slide5"),#imageLiteral(resourceName: "slide6"),#imageLiteral(resourceName: "slide7"),#imageLiteral(resourceName: "slide8"),#imageLiteral(resourceName: "slide9"),#imageLiteral(resourceName: "slide10"),#imageLiteral(resourceName: "slide11"),#imageLiteral(resourceName: "slide12"),#imageLiteral(resourceName: "slide13"),#imageLiteral(resourceName: "slide14"),#imageLiteral(resourceName: "slide15"),#imageLiteral(resourceName: "slide16"),#imageLiteral(resourceName: "slide17"),#imageLiteral(resourceName: "slide18"),#imageLiteral(resourceName: "slide19")]
+        animationView.animationDuration = 1;
+        animationView.animationRepeatCount = 5;
         animationView.startAnimating();
-        // Do any additional setup after loading the view.
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.performSegue(withIdentifier: "toResult", sender: self)
+            }
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
