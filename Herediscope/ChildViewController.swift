@@ -11,6 +11,7 @@ import UIKit
 class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }

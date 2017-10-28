@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--You-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="YourViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,8 +24,13 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXU-zQ-t18">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                <color key="barTintColor" red="0.0" green="0.15686274509803921" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="You" prompt=" " id="9Zw-5E-iF2"/>
+                                    <navigationItem title="You" prompt=" " id="9Zw-5E-iF2">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="Oq4-LV-E94">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="03X-us-0gA">
@@ -58,7 +63,7 @@
                             <constraint firstItem="jXU-zQ-t18" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="yAZ-EI-xib"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="You" image="your" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="03X-us-0gA" id="Mhl-or-y39"/>
                     </connections>
@@ -67,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Second-->
+        <!--Child-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="ChildViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,8 +86,13 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMg-cZ-3sr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                <color key="barTintColor" red="0.0" green="0.15686274510000001" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Child" prompt=" " id="2zK-PY-G38"/>
+                                    <navigationItem title="Child" prompt=" " id="2zK-PY-G38">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="2ZD-6P-Ufq">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nBh-jf-QiY">
@@ -115,7 +125,7 @@
                             <constraint firstItem="nBh-jf-QiY" firstAttribute="top" secondItem="oMg-cZ-3sr" secondAttribute="bottom" id="u4H-VU-riS"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Child" image="child" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="tableView" destination="nBh-jf-QiY" id="xk5-Hn-L23"/>
                     </connections>
@@ -160,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="2785" y="356"/>
         </scene>
-        <!--Item-->
+        <!--Reference-->
         <scene sceneID="IW4-wy-wpl">
             <objects>
                 <viewController id="6A6-tm-VW9" customClass="DictionaryViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
@@ -174,8 +184,13 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvK-ot-zNu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                <color key="barTintColor" red="0.0" green="0.15686274510000001" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Learn" prompt=" " id="F2h-p2-f54"/>
+                                    <navigationItem title="Learn" prompt=" " id="F2h-p2-f54">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="WHY-jn-bmd">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iYR-no-TOQ">
@@ -208,7 +223,7 @@
                             <constraint firstAttribute="trailing" secondItem="FvK-ot-zNu" secondAttribute="trailing" id="dDT-ro-3Qn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="E8O-ld-apm"/>
+                    <tabBarItem key="tabBarItem" title="Reference" image="dictionary" id="E8O-ld-apm"/>
                     <navigationItem key="navigationItem" id="1lq-uW-oGP"/>
                     <connections>
                         <outlet property="tableView" destination="iYR-no-TOQ" id="P2j-0w-qsw"/>
@@ -240,7 +255,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="child" width="48" height="48"/>
+        <image name="dictionary" width="48" height="48"/>
+        <image name="search" width="25" height="25"/>
+        <image name="your" width="48" height="48"/>
     </resources>
 </document>
