@@ -1,7 +1,5 @@
 {
-  results: [{
-    name: "hello"
-    }, {
-      name: "hi"
-      }]
+  "results": [
+    "hello"
+    , "hi"]
 }
