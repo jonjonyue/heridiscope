@@ -129,7 +129,6 @@
 		2023B8F91FA42ECE00AEA52F /* Herediscope */ = {
 			isa = PBXGroup;
 			children = (
-				2053220B1FA462F500683CBD /* phenotypes.json */,
 				2023B8FA1FA42ECE00AEA52F /* AppDelegate.swift */,
 				2023B8FC1FA42ECE00AEA52F /* YourViewController.swift */,
 				2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */,
@@ -146,6 +145,7 @@
 				205322071FA456DE00683CBD /* DiseaseTypes */,
 				205322061FA456CC00683CBD /* Enums */,
 				20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */,
+				2053220B1FA462F500683CBD /* phenotypes.json */,
 			);
 			path = Herediscope;
 			sourceTree = "<group>";

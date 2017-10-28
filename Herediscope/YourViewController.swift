@@ -41,52 +41,57 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath);
-        cell.textLabel?.text = testArray[indexPath.row];
+        cell.textLabel?.text = phenoTypeCache[indexPath.row].name;
         print("making cell")
         return cell;
     }
     
     func loadData() {
         print("Trying to fetch Data")
-        if let path = Bundle.main.path(forResource: "phenotypes", ofType: "json") {
-            print("Connected to file")
-            let jsonResult = getJSON(path: path)
-            
-            // do stuff
-            print("Found Data")
-            print(jsonResult[0])
-            for result in jsonResult.arrayValue {
-                let name = result["name"].stringValue
-                let description = result["description"].stringValue
-                let diagnosis = result["result"]["diagnosis"].stringValue
-                let action = result["result"]["action"].stringValue
-                var questions: [Question] = []
-                for question in result["questions"].arrayValue {
-                    let temp = Question(name: question["name"].stringValue, type: question["type"].stringValue, options: question["options"].arrayValue.map { $0.stringValue}, text: question["text"].stringValue)
-                    questions.append(temp)
+        let customSerialQueue = DispatchQueue(label: "popularLoad")
+        customSerialQueue.async {
+            if let path = Bundle.main.path(forResource: "phenotypes", ofType: "json") {
+                print("Connected to file")
+                let jsonResult = self.getJSON(path: path)
+                
+                // do stuff yy
+                print("Found Data")
+                print(jsonResult)
+                for result in jsonResult.arrayValue {
+                    let name = result["name"].stringValue
+                    let description = result["description"].stringValue
+                    let diagnosis = result["result"]["diagnosis"].stringValue
+                    let action = result["result"]["action"].stringValue
+                    var questions: [Question] = []
+                    for question in result["questions"].arrayValue {
+                        let temp = Question(name: question["name"].stringValue, type: question["type"].stringValue, options: question["options"].arrayValue.map { $0.stringValue}, text: question["text"].stringValue)
+                        questions.append(temp)
+                    }
+                    let answered = result["answered"].boolValue
+                    let buf = result["type"].stringValue
+                    var type: traitType = traitType.AutosomalDominant
+                    switch buf {
+                    case "AutosomalDominant":
+                        type = traitType.AutosomalDominant
+                    case "AutosomalRecessive":
+                        type = traitType.AutosomalRecessive
+                    case "SexLinkedDominant":
+                        type = traitType.SexLinkedDominant
+                    case "SexLinkedRecessive":
+                        type = traitType.SexLinkedRecessive
+                    default:
+                        type = traitType.AutosomalDominant
+                    }
+                    self.phenoTypeCache.append(Phenotype(name: name, description: description, result: Result(diagnosis: diagnosis, action: action), questions: questions, answered: answered, type: type))
+                    print("Recording Data")
+                    print(self.phenoTypeCache)
                 }
-                let answered = result["answered"].boolValue
-                let buf = result["type"].stringValue
-                var type: traitType = traitType.AutosomalDominant
-                switch buf {
-                case "AutosomalDominant":
-                    type = traitType.AutosomalDominant
-                case "AutosomalRecessive":
-                    type = traitType.AutosomalRecessive
-                case "SexLinkedDominant":
-                    type = traitType.SexLinkedDominant
-                case "SexLinkedRecessive":
-                    type = traitType.SexLinkedRecessive
-                default:
-                    type = traitType.AutosomalDominant
-                }
-                phenoTypeCache.append(Phenotype(name: name, description: description, result: Result(diagnosis: diagnosis, action: action), questions: questions, answered: answered, type: type))
-                print("Recording Data")
-                print(phenoTypeCache)
+            }
+            print("Reloading Tableview")
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
-        print("Reloading Tableview")
-        tableView.reloadData()
     }
     
     private func getJSON(path: String) -> JSON {
@@ -94,8 +99,13 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(url)
         do {
             let data = try Data(contentsOf: url)
-            return try JSON(data: data)
+            print(data)
+            print("Got Data")
+            let json = try JSON(data: data)
+            print("Got json")
+            return json
         } catch {
+            print("JSON failed to load")
             return JSON.null
         }
     }
