@@ -31,7 +31,14 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
+        print("Making questionnaire")
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionnaireViewController") as? QuestionnaireViewController {
+            print("Made View Controller")
+            if let navigator = navigationController {
+                print("Found Navigation Controller")
+                navigator.pushViewController(viewController, animated: true)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

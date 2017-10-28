@@ -30,6 +30,8 @@
 		2053220E1FA4643700683CBD /* herediscope font.png in Resources */ = {isa = PBXBuildFile; fileRef = 2053220D1FA4643700683CBD /* herediscope font.png */; };
 		20E5528E1FA4BBF30018A5D0 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5528D1FA4BBF30018A5D0 /* Type.swift */; };
 		20E552901FA4C8B80018A5D0 /* SwiftyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */; };
+		20E552921FA4E1DA0018A5D0 /* QuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */; };
+		20E552941FA4E4A10018A5D0 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E552931FA4E4A10018A5D0 /* ViewController1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		2053220D1FA4643700683CBD /* herediscope font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "herediscope font.png"; sourceTree = "<group>"; };
 		20E5528D1FA4BBF30018A5D0 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJson.swift; sourceTree = "<group>"; };
+		20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewController.swift; sourceTree = "<group>"; };
+		20E552931FA4E4A10018A5D0 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 				2023B8FC1FA42ECE00AEA52F /* YourViewController.swift */,
 				2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */,
 				205321F21FA43C3F00683CBD /* DictionaryViewController.swift */,
+				20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */,
 				2023B9001FA42ECE00AEA52F /* Main.storyboard */,
 				2023B9031FA42ECE00AEA52F /* Assets.xcassets */,
 				2053220D1FA4643700683CBD /* herediscope font.png */,
@@ -146,6 +151,7 @@
 				205322061FA456CC00683CBD /* Enums */,
 				20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */,
 				2053220B1FA462F500683CBD /* phenotypes.json */,
+				20E552931FA4E4A10018A5D0 /* ViewController1.swift */,
 			);
 			path = Herediscope;
 			sourceTree = "<group>";
@@ -337,7 +343,9 @@
 				205321FB1FA44EA300683CBD /* AutosomalDominant.swift in Sources */,
 				2023B8FF1FA42ECE00AEA52F /* ChildViewController.swift in Sources */,
 				205321F91FA444BC00683CBD /* Phenotypes.swift in Sources */,
+				20E552941FA4E4A10018A5D0 /* ViewController1.swift in Sources */,
 				2023B8FB1FA42ECE00AEA52F /* AppDelegate.swift in Sources */,
+				20E552921FA4E1DA0018A5D0 /* QuestionnaireViewController.swift in Sources */,
 				205321F31FA43C3F00683CBD /* DictionaryViewController.swift in Sources */,
 				205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */,
 				205321F51FA4412400683CBD /* Questions.swift in Sources */,
