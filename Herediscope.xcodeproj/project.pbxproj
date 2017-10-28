@@ -32,6 +32,8 @@
 		20E552901FA4C8B80018A5D0 /* SwiftyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */; };
 		20E552921FA4E1DA0018A5D0 /* QuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */; };
 		20E552941FA4E4A10018A5D0 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E552931FA4E4A10018A5D0 /* ViewController1.swift */; };
+		8ECF427A1FA4F93000549FA9 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF42791FA4F93000549FA9 /* ResultViewController.swift */; };
+		8ECF427C1FA50D9200549FA9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF427B1FA50D9200549FA9 /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJson.swift; sourceTree = "<group>"; };
 		20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewController.swift; sourceTree = "<group>"; };
 		20E552931FA4E4A10018A5D0 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		8ECF42791FA4F93000549FA9 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		8ECF427B1FA50D9200549FA9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +142,9 @@
 				2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */,
 				205321F21FA43C3F00683CBD /* DictionaryViewController.swift */,
 				20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */,
+				8ECF42791FA4F93000549FA9 /* ResultViewController.swift */,
 				2023B9001FA42ECE00AEA52F /* Main.storyboard */,
+				8ECF427B1FA50D9200549FA9 /* LoadingViewController.swift */,
 				2023B9031FA42ECE00AEA52F /* Assets.xcassets */,
 				2053220D1FA4643700683CBD /* herediscope font.png */,
 				205321FC1FA44F1700683CBD /* logo.png */,
@@ -349,12 +355,14 @@
 				205321F31FA43C3F00683CBD /* DictionaryViewController.swift in Sources */,
 				205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */,
 				205321F51FA4412400683CBD /* Questions.swift in Sources */,
+				8ECF427C1FA50D9200549FA9 /* LoadingViewController.swift in Sources */,
 				205321FF1FA4515900683CBD /* Genotypes.swift in Sources */,
 				205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */,
 				20E5528E1FA4BBF30018A5D0 /* Type.swift in Sources */,
 				2023B8FD1FA42ECE00AEA52F /* YourViewController.swift in Sources */,
 				205322011FA4562900683CBD /* AutosomalRecessive.swift in Sources */,
 				20E552901FA4C8B80018A5D0 /* SwiftyJson.swift in Sources */,
+				8ECF427A1FA4F93000549FA9 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
