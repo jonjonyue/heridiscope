@@ -149,6 +149,7 @@
 				205321F41FA4412400683CBD /* Questions.swift */,
 				205321F61FA442F100683CBD /* Results.swift */,
 				205321F81FA444BC00683CBD /* Phenotypes.swift */,
+				8ECF427F1FA525F400549FA9 /* DiseaseDict.swift */,
 				205322071FA456DE00683CBD /* DiseaseTypes */,
 				205322061FA456CC00683CBD /* Enums */,
 				20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */,
@@ -310,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				205321FD1FA44F1700683CBD /* logo.png in Resources */,
+				8ECF427E1FA525AD00549FA9 /* diseaseDict.json in Resources */,
 				2053220E1FA4643700683CBD /* herediscope font.png in Resources */,
 				2023B9071FA42ECE00AEA52F /* LaunchScreen.storyboard in Resources */,
 				2023B9041FA42ECE00AEA52F /* Assets.xcassets in Resources */,
@@ -349,6 +351,7 @@
 				205321F31FA43C3F00683CBD /* DictionaryViewController.swift in Sources */,
 				20E5529A1FA523630018A5D0 /* QuestionViewController.swift in Sources */,
 				205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */,
+				8ECF42801FA525F400549FA9 /* DiseaseDict.swift in Sources */,
 				205321F51FA4412400683CBD /* Questions.swift in Sources */,
 				8ECF427C1FA50D9200549FA9 /* LoadingViewController.swift in Sources */,
 				205321FF1FA4515900683CBD /* Genotypes.swift in Sources */,
