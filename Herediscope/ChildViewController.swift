@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ChildViewController.swift
 //  Herediscope
 //
 //  Created by Jonathan yue on 10/27/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ChildViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
