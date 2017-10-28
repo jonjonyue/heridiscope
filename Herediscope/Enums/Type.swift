@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Type {
+enum traitType {
     case AutosomalDominant
     case AutosomalRecessive
     case SexLinkedDominant

@@ -26,9 +26,10 @@
 		205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322021FA4568400683CBD /* SexLinkedDominant.swift */; };
 		205322051FA4569E00683CBD /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322041FA4569E00683CBD /* Gender.swift */; };
 		205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322081FA459B000683CBD /* SexLinkedRecessive.swift */; };
-		2053220C1FA462F500683CBD /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2053220B1FA462F500683CBD /* data.json */; };
+		2053220C1FA462F500683CBD /* phenotypes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2053220B1FA462F500683CBD /* phenotypes.json */; };
 		2053220E1FA4643700683CBD /* herediscope font.png in Resources */ = {isa = PBXBuildFile; fileRef = 2053220D1FA4643700683CBD /* herediscope font.png */; };
 		20E5528E1FA4BBF30018A5D0 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5528D1FA4BBF30018A5D0 /* Type.swift */; };
+		20E552901FA4C8B80018A5D0 /* SwiftyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,9 +75,10 @@
 		205322021FA4568400683CBD /* SexLinkedDominant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexLinkedDominant.swift; sourceTree = "<group>"; };
 		205322041FA4569E00683CBD /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		205322081FA459B000683CBD /* SexLinkedRecessive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexLinkedRecessive.swift; sourceTree = "<group>"; };
-		2053220B1FA462F500683CBD /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		2053220B1FA462F500683CBD /* phenotypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = phenotypes.json; sourceTree = "<group>"; };
 		2053220D1FA4643700683CBD /* herediscope font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "herediscope font.png"; sourceTree = "<group>"; };
 		20E5528D1FA4BBF30018A5D0 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +129,7 @@
 		2023B8F91FA42ECE00AEA52F /* Herediscope */ = {
 			isa = PBXGroup;
 			children = (
-				2053220B1FA462F500683CBD /* data.json */,
+				2053220B1FA462F500683CBD /* phenotypes.json */,
 				2023B8FA1FA42ECE00AEA52F /* AppDelegate.swift */,
 				2023B8FC1FA42ECE00AEA52F /* YourViewController.swift */,
 				2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */,
@@ -143,6 +145,7 @@
 				205321F81FA444BC00683CBD /* Phenotypes.swift */,
 				205322071FA456DE00683CBD /* DiseaseTypes */,
 				205322061FA456CC00683CBD /* Enums */,
+				20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */,
 			);
 			path = Herediscope;
 			sourceTree = "<group>";
@@ -303,7 +306,7 @@
 				2053220E1FA4643700683CBD /* herediscope font.png in Resources */,
 				2023B9071FA42ECE00AEA52F /* LaunchScreen.storyboard in Resources */,
 				2023B9041FA42ECE00AEA52F /* Assets.xcassets in Resources */,
-				2053220C1FA462F500683CBD /* data.json in Resources */,
+				2053220C1FA462F500683CBD /* phenotypes.json in Resources */,
 				2023B9021FA42ECE00AEA52F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +346,7 @@
 				20E5528E1FA4BBF30018A5D0 /* Type.swift in Sources */,
 				2023B8FD1FA42ECE00AEA52F /* YourViewController.swift in Sources */,
 				205322011FA4562900683CBD /* AutosomalRecessive.swift in Sources */,
+				20E552901FA4C8B80018A5D0 /* SwiftyJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

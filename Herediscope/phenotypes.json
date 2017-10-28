@@ -1,0 +1,20 @@
+ [{
+  "name": "Eye Color",
+  "description": "Eye Color is highly dependent on the parents eyes. There is a difference between blue (lighter color) and brown (any color that isn't blue) eyes. wao",
+  "result": [
+             "diagnosis": "",
+             "action": ""
+             ],
+  "questions": [{
+                "name": "Mom's Eye Color",
+                "type": "picker",
+                "options": [
+                            "blue",
+                            "brown",
+                            "green"
+                            ],
+                "text": "What is the color of your mom's eye?"
+                }],
+  "answered": false,
+  "type": "Autosomal Dominant"
+  }]
