@@ -2,7 +2,7 @@
 //  ChildViewController.swift
 //  Herediscope
 //
-//  Created by Jonathan Yue on 10/27/17.
+//  Created by Jonathan Yue on 10/27/17 @ Archhacks.
 //  Copyright © 2017 Genesis. All rights reserved.
 //
 
