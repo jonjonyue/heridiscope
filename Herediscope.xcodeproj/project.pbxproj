@@ -19,6 +19,13 @@
 		205321F51FA4412400683CBD /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205321F41FA4412400683CBD /* Questions.swift */; };
 		205321F71FA442F100683CBD /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205321F61FA442F100683CBD /* Results.swift */; };
 		205321F91FA444BC00683CBD /* Phenotypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205321F81FA444BC00683CBD /* Phenotypes.swift */; };
+		205321FB1FA44EA300683CBD /* AutosomalDominant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205321FA1FA44EA300683CBD /* AutosomalDominant.swift */; };
+		205321FD1FA44F1700683CBD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 205321FC1FA44F1700683CBD /* logo.png */; };
+		205321FF1FA4515900683CBD /* Genotypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205321FE1FA4515900683CBD /* Genotypes.swift */; };
+		205322011FA4562900683CBD /* AutosomalRecessive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322001FA4562900683CBD /* AutosomalRecessive.swift */; };
+		205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322021FA4568400683CBD /* SexLinkedDominant.swift */; };
+		205322051FA4569E00683CBD /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322041FA4569E00683CBD /* Gender.swift */; };
+		205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322081FA459B000683CBD /* SexLinkedRecessive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,13 @@
 		205321F41FA4412400683CBD /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		205321F61FA442F100683CBD /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		205321F81FA444BC00683CBD /* Phenotypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phenotypes.swift; sourceTree = "<group>"; };
+		205321FA1FA44EA300683CBD /* AutosomalDominant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosomalDominant.swift; sourceTree = "<group>"; };
+		205321FC1FA44F1700683CBD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		205321FE1FA4515900683CBD /* Genotypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genotypes.swift; sourceTree = "<group>"; };
+		205322001FA4562900683CBD /* AutosomalRecessive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosomalRecessive.swift; sourceTree = "<group>"; };
+		205322021FA4568400683CBD /* SexLinkedDominant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexLinkedDominant.swift; sourceTree = "<group>"; };
+		205322041FA4569E00683CBD /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		205322081FA459B000683CBD /* SexLinkedRecessive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexLinkedRecessive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +127,14 @@
 				205321F21FA43C3F00683CBD /* DictionaryViewController.swift */,
 				2023B9001FA42ECE00AEA52F /* Main.storyboard */,
 				2023B9031FA42ECE00AEA52F /* Assets.xcassets */,
+				205321FC1FA44F1700683CBD /* logo.png */,
 				2023B9051FA42ECE00AEA52F /* LaunchScreen.storyboard */,
 				2023B9081FA42ECE00AEA52F /* Info.plist */,
 				205321F41FA4412400683CBD /* Questions.swift */,
 				205321F61FA442F100683CBD /* Results.swift */,
 				205321F81FA444BC00683CBD /* Phenotypes.swift */,
+				205322071FA456DE00683CBD /* DiseaseTypes */,
+				205322061FA456CC00683CBD /* Enums */,
 			);
 			path = Herediscope;
 			sourceTree = "<group>";
@@ -138,6 +155,26 @@
 				2023B91E1FA42ECF00AEA52F /* Info.plist */,
 			);
 			path = HerediscopeUITests;
+			sourceTree = "<group>";
+		};
+		205322061FA456CC00683CBD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				205321FE1FA4515900683CBD /* Genotypes.swift */,
+				205322041FA4569E00683CBD /* Gender.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		205322071FA456DE00683CBD /* DiseaseTypes */ = {
+			isa = PBXGroup;
+			children = (
+				205321FA1FA44EA300683CBD /* AutosomalDominant.swift */,
+				205322001FA4562900683CBD /* AutosomalRecessive.swift */,
+				205322021FA4568400683CBD /* SexLinkedDominant.swift */,
+				205322081FA459B000683CBD /* SexLinkedRecessive.swift */,
+			);
+			path = DiseaseTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205321FD1FA44F1700683CBD /* logo.png in Resources */,
 				2023B9071FA42ECE00AEA52F /* LaunchScreen.storyboard in Resources */,
 				2023B9041FA42ECE00AEA52F /* Assets.xcassets in Resources */,
 				2023B9021FA42ECE00AEA52F /* Main.storyboard in Resources */,
@@ -280,13 +318,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205322051FA4569E00683CBD /* Gender.swift in Sources */,
 				205321F71FA442F100683CBD /* Results.swift in Sources */,
+				205321FB1FA44EA300683CBD /* AutosomalDominant.swift in Sources */,
 				2023B8FF1FA42ECE00AEA52F /* ChildViewController.swift in Sources */,
 				205321F91FA444BC00683CBD /* Phenotypes.swift in Sources */,
 				2023B8FB1FA42ECE00AEA52F /* AppDelegate.swift in Sources */,
 				205321F31FA43C3F00683CBD /* DictionaryViewController.swift in Sources */,
+				205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */,
 				205321F51FA4412400683CBD /* Questions.swift in Sources */,
+				205321FF1FA4515900683CBD /* Genotypes.swift in Sources */,
+				205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */,
 				2023B8FD1FA42ECE00AEA52F /* YourViewController.swift in Sources */,
+				205322011FA4562900683CBD /* AutosomalRecessive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
