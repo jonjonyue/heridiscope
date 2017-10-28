@@ -54,7 +54,7 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("Connected to file")
                 let jsonResult = self.getJSON(path: path)
                 
-                // do stuff
+                // do stuff yy
                 print("Found Data")
                 print(jsonResult)
                 for result in jsonResult.arrayValue {
