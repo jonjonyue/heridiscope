@@ -28,6 +28,7 @@
 		205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322081FA459B000683CBD /* SexLinkedRecessive.swift */; };
 		2053220C1FA462F500683CBD /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2053220B1FA462F500683CBD /* data.json */; };
 		2053220E1FA4643700683CBD /* herediscope font.png in Resources */ = {isa = PBXBuildFile; fileRef = 2053220D1FA4643700683CBD /* herediscope font.png */; };
+		20E5528E1FA4BBF30018A5D0 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5528D1FA4BBF30018A5D0 /* Type.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		205322081FA459B000683CBD /* SexLinkedRecessive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexLinkedRecessive.swift; sourceTree = "<group>"; };
 		2053220B1FA462F500683CBD /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		2053220D1FA4643700683CBD /* herediscope font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "herediscope font.png"; sourceTree = "<group>"; };
+		20E5528D1FA4BBF30018A5D0 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				205321FE1FA4515900683CBD /* Genotypes.swift */,
 				205322041FA4569E00683CBD /* Gender.swift */,
+				20E5528D1FA4BBF30018A5D0 /* Type.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				205321F51FA4412400683CBD /* Questions.swift in Sources */,
 				205321FF1FA4515900683CBD /* Genotypes.swift in Sources */,
 				205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */,
+				20E5528E1FA4BBF30018A5D0 /* Type.swift in Sources */,
 				2023B8FD1FA42ECE00AEA52F /* YourViewController.swift in Sources */,
 				205322011FA4562900683CBD /* AutosomalRecessive.swift in Sources */,
 			);

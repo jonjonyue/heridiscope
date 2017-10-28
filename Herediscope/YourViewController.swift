@@ -16,6 +16,8 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("View Loaded")
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,12 +46,17 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func loadData() {
-        if let path = Bundle.main.path(forResource: "test", ofType: "json") {
+        print("Trying to fetch Data")
+        if let path = Bundle.main.path(forResource: "data", ofType: "json") {
             do {
+                print("Connected to file")
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                print("URL good")
+                let jsonResult = try JSONSerialization.jsonObject(with: data)
+                print("JSON result good")
                 if let jsonResult = jsonResult as? Dictionary<String, AnyObject> {
                     // do stuff
+                    print("Found Data")
                     for result in jsonResult["results"] as! [String] {
                         testArray.append(result)
                         print("Recording Data")
@@ -57,8 +64,10 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             } catch {
                 // handle error
+                print("ERROR")
             }
         }
+        print("Reloading Tableview")
         tableView.reloadData()
     }
 }
