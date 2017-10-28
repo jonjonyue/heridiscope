@@ -17,6 +17,8 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableView.delegate = self
+        tableView.dataSource = self
         print("View Loaded")
         loadData()
     }
@@ -32,14 +34,14 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         print("Making questionnaire")
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionnaireViewController") as? QuestionnaireViewController {
-            print("Made View Controller")
-            if let navigator = navigationController {
-                print("Found Navigation Controller")
-                navigator.pushViewController(viewController, animated: true)
-            }
-        }
+        performSegue(withIdentifier: "toQuestionnaire", sender: nil)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let viewController = segue.destination as? QuestionnaireViewController {
+//            viewController.recipient
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return array.size

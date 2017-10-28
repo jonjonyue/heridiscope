@@ -13,7 +13,7 @@
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="YourViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="toQuestionnaire" id="9pv-A4-QxB" customClass="YourViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -61,6 +61,7 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="03X-us-0gA" id="Mhl-or-y39"/>
+                        <segue destination="SkT-Dz-5Vb" kind="show" id="c28-Zx-nYi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -124,23 +125,13 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="bEa-Ag-O09">
+        <!--Questionnaire View Controller-->
+        <scene sceneID="rKq-x6-AL9">
             <objects>
-                <viewController id="Pto-SG-FeO" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9QC-JZ-IOC"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZwY-CP-jth"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BxS-gS-fl8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zTE-9i-f5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController storyboardIdentifier="questionnaire" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="SkT-Dz-5Vb" customClass="QuestionnaireViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YwX-V3-Dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826" y="351"/>
+            <point key="canvasLocation" x="1721" y="349"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="T0a-mN-TsU">
