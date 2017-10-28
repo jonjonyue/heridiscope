@@ -27,6 +27,7 @@
 		205322051FA4569E00683CBD /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322041FA4569E00683CBD /* Gender.swift */; };
 		205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322081FA459B000683CBD /* SexLinkedRecessive.swift */; };
 		2053220C1FA462F500683CBD /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2053220B1FA462F500683CBD /* data.json */; };
+		2053220E1FA4643700683CBD /* herediscope font.png in Resources */ = {isa = PBXBuildFile; fileRef = 2053220D1FA4643700683CBD /* herediscope font.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		205322041FA4569E00683CBD /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		205322081FA459B000683CBD /* SexLinkedRecessive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexLinkedRecessive.swift; sourceTree = "<group>"; };
 		2053220B1FA462F500683CBD /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		2053220D1FA4643700683CBD /* herediscope font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "herediscope font.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				205321F21FA43C3F00683CBD /* DictionaryViewController.swift */,
 				2023B9001FA42ECE00AEA52F /* Main.storyboard */,
 				2023B9031FA42ECE00AEA52F /* Assets.xcassets */,
+				2053220D1FA4643700683CBD /* herediscope font.png */,
 				205321FC1FA44F1700683CBD /* logo.png */,
 				2023B9051FA42ECE00AEA52F /* LaunchScreen.storyboard */,
 				2023B9081FA42ECE00AEA52F /* Info.plist */,
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				205321FD1FA44F1700683CBD /* logo.png in Resources */,
+				2053220E1FA4643700683CBD /* herediscope font.png in Resources */,
 				2023B9071FA42ECE00AEA52F /* LaunchScreen.storyboard in Resources */,
 				2023B9041FA42ECE00AEA52F /* Assets.xcassets in Resources */,
 				2053220C1FA462F500683CBD /* data.json in Resources */,
