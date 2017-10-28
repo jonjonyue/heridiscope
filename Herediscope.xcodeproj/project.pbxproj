@@ -26,6 +26,7 @@
 		205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322021FA4568400683CBD /* SexLinkedDominant.swift */; };
 		205322051FA4569E00683CBD /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322041FA4569E00683CBD /* Gender.swift */; };
 		205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205322081FA459B000683CBD /* SexLinkedRecessive.swift */; };
+		2053220C1FA462F500683CBD /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2053220B1FA462F500683CBD /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		205322021FA4568400683CBD /* SexLinkedDominant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexLinkedDominant.swift; sourceTree = "<group>"; };
 		205322041FA4569E00683CBD /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		205322081FA459B000683CBD /* SexLinkedRecessive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexLinkedRecessive.swift; sourceTree = "<group>"; };
+		2053220B1FA462F500683CBD /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		2023B8F91FA42ECE00AEA52F /* Herediscope */ = {
 			isa = PBXGroup;
 			children = (
+				2053220B1FA462F500683CBD /* data.json */,
 				2023B8FA1FA42ECE00AEA52F /* AppDelegate.swift */,
 				2023B8FC1FA42ECE00AEA52F /* YourViewController.swift */,
 				2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */,
@@ -293,6 +296,7 @@
 				205321FD1FA44F1700683CBD /* logo.png in Resources */,
 				2023B9071FA42ECE00AEA52F /* LaunchScreen.storyboard in Resources */,
 				2023B9041FA42ECE00AEA52F /* Assets.xcassets in Resources */,
+				2053220C1FA462F500683CBD /* data.json in Resources */,
 				2023B9021FA42ECE00AEA52F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
