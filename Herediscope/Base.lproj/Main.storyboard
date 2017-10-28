@@ -79,7 +79,7 @@
                     <connections>
                         <outlet property="searchBar" destination="SqT-a7-KEr" id="cFB-jk-OGo"/>
                         <outlet property="tableView" destination="03X-us-0gA" id="Mhl-or-y39"/>
-                        <segue destination="SkT-Dz-5Vb" kind="show" id="c28-Zx-nYi"/>
+                        <segue destination="SkT-Dz-5Vb" kind="show" identifier="toQuestionnaire" id="c28-Zx-nYi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

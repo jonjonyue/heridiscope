@@ -19,6 +19,8 @@ class QuestionnaireViewController: UIPageViewController, UIPageViewControllerDat
         self.dataSource = self
         self.delegate = self
         let initialPage = 0
+        
+        
         let page1 = ViewController1()
         let page2 = ViewController1()
         let page3 = ViewController1()

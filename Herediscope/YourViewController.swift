@@ -12,20 +12,20 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var testArray: [String] = []
     var phenoTypeCache: [Phenotype] = []
     var filteredData: [Phenotype] = []
     
     var isSearching = false
     
     override func viewDidLoad() {
-        searchBar.isHidden = true;
-        searchBar.isUserInteractionEnabled = false;
-        searchBar.delegate = self; 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = true
+        searchBar.isHidden = true;
+        searchBar.isUserInteractionEnabled = false;
+        searchBar.delegate = self;
         print("View Loaded")
         loadData()
     }
@@ -35,20 +35,16 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Making questionnaire")
         performSegue(withIdentifier: "toQuestionnaire", sender: nil)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if let viewController = segue.destination as? QuestionnaireViewController {
 //            viewController.recipient
 //        }
-//    }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return array.size
