@@ -140,6 +140,7 @@
 				20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */,
 				20E552991FA523630018A5D0 /* QuestionViewController.swift */,
 				2023B9001FA42ECE00AEA52F /* Main.storyboard */,
+				8ECF427B1FA50D9200549FA9 /* LoadingViewController.swift */,
 				2023B9031FA42ECE00AEA52F /* Assets.xcassets */,
 				2053220D1FA4643700683CBD /* herediscope font.png */,
 				205321FC1FA44F1700683CBD /* logo.png */,
@@ -349,12 +350,14 @@
 				20E5529A1FA523630018A5D0 /* QuestionViewController.swift in Sources */,
 				205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */,
 				205321F51FA4412400683CBD /* Questions.swift in Sources */,
+				8ECF427C1FA50D9200549FA9 /* LoadingViewController.swift in Sources */,
 				205321FF1FA4515900683CBD /* Genotypes.swift in Sources */,
 				205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */,
 				20E5528E1FA4BBF30018A5D0 /* Type.swift in Sources */,
 				2023B8FD1FA42ECE00AEA52F /* YourViewController.swift in Sources */,
 				205322011FA4562900683CBD /* AutosomalRecessive.swift in Sources */,
 				20E552901FA4C8B80018A5D0 /* SwiftyJson.swift in Sources */,
+				8ECF427A1FA4F93000549FA9 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
