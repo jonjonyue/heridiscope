@@ -8,13 +8,18 @@
 
 import UIKit
 
-class DictionaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DictionaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var example = ["eye color", "hair type", "double eyelids", "sex"];
 
     override func viewDidLoad() {
+        searchBar.delegate = self;
+        searchBar.isHidden = true;
+        searchBar.isUserInteractionEnabled = false;
+        self.navigationController?.navigationBar.isTranslucent = false;
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -55,5 +60,19 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func searchPressed(_ sender: Any) {
+        searchBar.isHidden = false;
+        searchBar.isUserInteractionEnabled = true;
+        searchBar.showsCancelButton = true;
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.isHidden = true;
+        searchBar.isUserInteractionEnabled = false;
+        searchBar.text = "";
+    }
+    
+    
+    
 }

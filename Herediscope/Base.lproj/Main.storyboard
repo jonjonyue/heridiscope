@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--You-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController storyboardIdentifier="toQuestionnaire" id="9pv-A4-QxB" customClass="YourViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,8 +24,16 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXU-zQ-t18">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                <color key="barTintColor" red="0.0" green="0.15686274509803921" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="You" prompt=" " id="9Zw-5E-iF2"/>
+                                    <navigationItem title="You" prompt=" " id="9Zw-5E-iF2">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="Oq4-LV-E94">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="searchPressed:" destination="9pv-A4-QxB" id="yGT-OA-n8d"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="03X-us-0gA">
@@ -46,20 +54,30 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="fXP-Xm-UPL"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search here" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SqT-a7-KEr">
+                                <rect key="frame" x="0.0" y="22" width="375" height="56"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.0" green="0.27450980392156865" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="03X-us-0gA" secondAttribute="trailing" id="2Ca-hs-0IQ"/>
                             <constraint firstItem="03X-us-0gA" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="2Ep-5c-gUM"/>
                             <constraint firstItem="jXU-zQ-t18" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="5bc-bb-mTy"/>
+                            <constraint firstItem="SqT-a7-KEr" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="K34-yC-iyh"/>
                             <constraint firstItem="03X-us-0gA" firstAttribute="top" secondItem="jXU-zQ-t18" secondAttribute="bottom" id="U3i-Ld-e6X"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="03X-us-0gA" secondAttribute="bottom" id="UkV-eE-cPR"/>
+                            <constraint firstAttribute="trailing" secondItem="SqT-a7-KEr" secondAttribute="trailing" id="apy-7H-nzV"/>
+                            <constraint firstItem="03X-us-0gA" firstAttribute="top" secondItem="SqT-a7-KEr" secondAttribute="bottom" id="bUg-5B-v5M"/>
                             <constraint firstAttribute="trailing" secondItem="jXU-zQ-t18" secondAttribute="trailing" id="pfM-Zv-jz2"/>
                             <constraint firstItem="jXU-zQ-t18" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="yAZ-EI-xib"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="You" image="your" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="searchBar" destination="SqT-a7-KEr" id="cFB-jk-OGo"/>
                         <outlet property="tableView" destination="03X-us-0gA" id="Mhl-or-y39"/>
                         <segue destination="SkT-Dz-5Vb" kind="show" id="c28-Zx-nYi"/>
                     </connections>
@@ -68,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Second-->
+        <!--Child-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="ChildViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,8 +100,16 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMg-cZ-3sr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                <color key="barTintColor" red="0.0" green="0.15686274510000001" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Child" prompt=" " id="2zK-PY-G38"/>
+                                    <navigationItem title="Child" prompt=" " id="2zK-PY-G38">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="2ZD-6P-Ufq">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="searchPressed:" destination="8rJ-Kc-sve" id="FVi-yd-co5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nBh-jf-QiY">
@@ -104,20 +130,30 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="qEF-3v-B3H"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search here " translatesAutoresizingMaskIntoConstraints="NO" id="JYd-AK-zpD">
+                                <rect key="frame" x="0.0" y="22" width="375" height="56"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.0" green="0.25882352941176467" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nBh-jf-QiY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="64v-Lx-bza"/>
                             <constraint firstItem="oMg-cZ-3sr" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="IY4-8v-WWx"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="nBh-jf-QiY" secondAttribute="bottom" id="L6i-kM-ele"/>
+                            <constraint firstItem="nBh-jf-QiY" firstAttribute="top" secondItem="JYd-AK-zpD" secondAttribute="bottom" id="PFj-J1-rNp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nBh-jf-QiY" secondAttribute="trailing" id="S4g-ue-5oc"/>
                             <constraint firstAttribute="trailing" secondItem="oMg-cZ-3sr" secondAttribute="trailing" id="ZDQ-aT-WXK"/>
                             <constraint firstItem="oMg-cZ-3sr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="fON-vc-LBe"/>
+                            <constraint firstItem="JYd-AK-zpD" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="fjS-41-wqr"/>
                             <constraint firstItem="nBh-jf-QiY" firstAttribute="top" secondItem="oMg-cZ-3sr" secondAttribute="bottom" id="u4H-VU-riS"/>
+                            <constraint firstAttribute="trailing" secondItem="JYd-AK-zpD" secondAttribute="trailing" id="ydp-4G-C5T"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Child" image="child" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="searchBar" destination="JYd-AK-zpD" id="PAV-mq-KZg"/>
                         <outlet property="tableView" destination="nBh-jf-QiY" id="xk5-Hn-L23"/>
                     </connections>
                 </viewController>
@@ -151,7 +187,7 @@
             </objects>
             <point key="canvasLocation" x="2785" y="356"/>
         </scene>
-        <!--Item-->
+        <!--Reference-->
         <scene sceneID="IW4-wy-wpl">
             <objects>
                 <viewController id="6A6-tm-VW9" customClass="DictionaryViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
@@ -165,8 +201,16 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvK-ot-zNu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                <color key="barTintColor" red="0.0" green="0.15686274510000001" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Learn" prompt=" " id="F2h-p2-f54"/>
+                                    <navigationItem title="Learn" prompt=" " id="F2h-p2-f54">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="WHY-jn-bmd">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="searchPressed:" destination="6A6-tm-VW9" id="Nmd-nY-teV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iYR-no-TOQ">
@@ -187,21 +231,31 @@
                                     <outlet property="delegate" destination="6A6-tm-VW9" id="14T-z7-dVX"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search here" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP8-Jc-Nmj">
+                                <rect key="frame" x="0.0" y="22" width="375" height="56"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.0" green="0.25882352941176467" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fP8-Jc-Nmj" secondAttribute="trailing" id="0bE-Ec-N9p"/>
                             <constraint firstItem="iYR-no-TOQ" firstAttribute="leading" secondItem="Yta-Td-7fk" secondAttribute="leadingMargin" id="1W8-MA-gs1"/>
                             <constraint firstItem="ijv-wa-7aZ" firstAttribute="top" secondItem="iYR-no-TOQ" secondAttribute="bottom" id="2La-cs-0p6"/>
+                            <constraint firstItem="iYR-no-TOQ" firstAttribute="top" secondItem="fP8-Jc-Nmj" secondAttribute="bottom" id="4da-x9-LPh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iYR-no-TOQ" secondAttribute="trailing" id="53S-8K-Z44"/>
                             <constraint firstItem="iYR-no-TOQ" firstAttribute="top" secondItem="FvK-ot-zNu" secondAttribute="bottom" id="79L-Yb-24C"/>
                             <constraint firstItem="FvK-ot-zNu" firstAttribute="leading" secondItem="Yta-Td-7fk" secondAttribute="leading" id="O8q-St-YfF"/>
                             <constraint firstItem="FvK-ot-zNu" firstAttribute="top" secondItem="Yta-Td-7fk" secondAttribute="top" id="Z6u-I2-b76"/>
                             <constraint firstAttribute="trailing" secondItem="FvK-ot-zNu" secondAttribute="trailing" id="dDT-ro-3Qn"/>
+                            <constraint firstItem="fP8-Jc-Nmj" firstAttribute="leading" secondItem="Yta-Td-7fk" secondAttribute="leading" id="zNS-Jq-Ek4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="E8O-ld-apm"/>
+                    <tabBarItem key="tabBarItem" title="Reference" image="dictionary" id="E8O-ld-apm"/>
                     <navigationItem key="navigationItem" id="1lq-uW-oGP"/>
                     <connections>
+                        <outlet property="searchBar" destination="fP8-Jc-Nmj" id="IId-ge-IO8"/>
                         <outlet property="tableView" destination="iYR-no-TOQ" id="P2j-0w-qsw"/>
                     </connections>
                 </viewController>
@@ -231,7 +285,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="child" width="48" height="48"/>
+        <image name="dictionary" width="48" height="48"/>
+        <image name="search" width="25" height="25"/>
+        <image name="your" width="48" height="48"/>
     </resources>
 </document>

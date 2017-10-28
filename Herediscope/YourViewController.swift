@@ -8,13 +8,20 @@
 
 import UIKit
 
-class YourViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class YourViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var testArray: [String] = []
     var phenoTypeCache: [Phenotype] = []
+    var filteredData: [Phenotype] = []
+    
+    var isSearching = false
     
     override func viewDidLoad() {
+        searchBar.isHidden = true;
+        searchBar.isUserInteractionEnabled = false;
+        searchBar.delegate = self; 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self
@@ -45,15 +52,25 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return array.size
-        return phenoTypeCache.count;
+        if isSearching == false {
+        return phenoTypeCache.count
+        } else {
+            return filteredData.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath);
+        if isSearching == false {
         cell.textLabel?.text = phenoTypeCache[indexPath.row].name;
+        } else {
+            cell.textLabel?.text = filteredData[indexPath.row].name;
+        }
         print("making cell")
         return cell;
     }
+    
     
     func loadData() {
         print("Trying to fetch Data")
@@ -118,5 +135,41 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
             return JSON.null
         }
     }
+    
+    
+    
+    //MARK: Search Bar Delegate
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            isSearching = false
+              view.endEditing(true)
+              tableView.reloadData()
+          } else {
+            isSearching = true
+            filteredData = phenoTypeCache.filter({ $0.name.range(of: searchBar.text!, options: [.anchored, .caseInsensitive, .diacriticInsensitive]) != nil })
+            tableView.reloadData()
+        }
+    }
+    
+    
+    //MARK: Actions
+    
+    @IBAction func searchPressed(_ sender: Any) {
+        searchBar.isHidden = false;
+        searchBar.isUserInteractionEnabled = true;
+        searchBar.showsCancelButton = true;
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.isHidden = true;
+        searchBar.isUserInteractionEnabled = false;
+        searchBar.text = "";
+    }
+        
+    
+    
+    
 }
 
