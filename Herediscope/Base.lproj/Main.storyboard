@@ -94,6 +94,26 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="IW4-wy-wpl">
+            <objects>
+                <viewController id="6A6-tm-VW9" customClass="DictionaryViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ub-bb-TJ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ijv-wa-7aZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yta-Td-7fk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="E8O-ld-apm"/>
+                    <navigationItem key="navigationItem" id="1lq-uW-oGP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xq-ny-DSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1079"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -107,11 +127,12 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="6A6-tm-VW9" kind="relationship" relationship="viewControllers" id="ZML-JJ-PXI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-306" y="544"/>
         </scene>
     </scenes>
     <resources>
