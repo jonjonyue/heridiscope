@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  YourViewController.swift
 //  Herediscope
 //
 //  Created by Jonathan yue on 10/27/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class YourViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
