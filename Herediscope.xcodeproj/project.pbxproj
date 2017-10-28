@@ -32,6 +32,7 @@
 		20E552901FA4C8B80018A5D0 /* SwiftyJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */; };
 		20E552921FA4E1DA0018A5D0 /* QuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */; };
 		20E5529A1FA523630018A5D0 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E552991FA523630018A5D0 /* QuestionViewController.swift */; };
+		20E5529C1FA5408C0018A5D0 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5529B1FA5408B0018A5D0 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJson.swift; sourceTree = "<group>"; };
 		20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewController.swift; sourceTree = "<group>"; };
 		20E552991FA523630018A5D0 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		20E5529B1FA5408B0018A5D0 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,12 +137,12 @@
 			children = (
 				2023B8FA1FA42ECE00AEA52F /* AppDelegate.swift */,
 				2023B8FC1FA42ECE00AEA52F /* YourViewController.swift */,
+				20E5529B1FA5408B0018A5D0 /* ResultViewController.swift */,
 				2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */,
 				205321F21FA43C3F00683CBD /* DictionaryViewController.swift */,
 				20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */,
 				20E552991FA523630018A5D0 /* QuestionViewController.swift */,
 				2023B9001FA42ECE00AEA52F /* Main.storyboard */,
-				8ECF427B1FA50D9200549FA9 /* LoadingViewController.swift */,
 				2023B9031FA42ECE00AEA52F /* Assets.xcassets */,
 				2053220D1FA4643700683CBD /* herediscope font.png */,
 				205321FC1FA44F1700683CBD /* logo.png */,
@@ -149,7 +151,6 @@
 				205321F41FA4412400683CBD /* Questions.swift */,
 				205321F61FA442F100683CBD /* Results.swift */,
 				205321F81FA444BC00683CBD /* Phenotypes.swift */,
-				8ECF427F1FA525F400549FA9 /* DiseaseDict.swift */,
 				205322071FA456DE00683CBD /* DiseaseTypes */,
 				205322061FA456CC00683CBD /* Enums */,
 				20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */,
@@ -311,7 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				205321FD1FA44F1700683CBD /* logo.png in Resources */,
-				8ECF427E1FA525AD00549FA9 /* diseaseDict.json in Resources */,
 				2053220E1FA4643700683CBD /* herediscope font.png in Resources */,
 				2023B9071FA42ECE00AEA52F /* LaunchScreen.storyboard in Resources */,
 				2023B9041FA42ECE00AEA52F /* Assets.xcassets in Resources */,
@@ -351,16 +351,14 @@
 				205321F31FA43C3F00683CBD /* DictionaryViewController.swift in Sources */,
 				20E5529A1FA523630018A5D0 /* QuestionViewController.swift in Sources */,
 				205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */,
-				8ECF42801FA525F400549FA9 /* DiseaseDict.swift in Sources */,
 				205321F51FA4412400683CBD /* Questions.swift in Sources */,
-				8ECF427C1FA50D9200549FA9 /* LoadingViewController.swift in Sources */,
 				205321FF1FA4515900683CBD /* Genotypes.swift in Sources */,
 				205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */,
 				20E5528E1FA4BBF30018A5D0 /* Type.swift in Sources */,
 				2023B8FD1FA42ECE00AEA52F /* YourViewController.swift in Sources */,
 				205322011FA4562900683CBD /* AutosomalRecessive.swift in Sources */,
 				20E552901FA4C8B80018A5D0 /* SwiftyJson.swift in Sources */,
-				8ECF427A1FA4F93000549FA9 /* ResultViewController.swift in Sources */,
+				20E5529C1FA5408C0018A5D0 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
