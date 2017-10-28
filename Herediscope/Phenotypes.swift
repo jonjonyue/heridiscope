@@ -14,5 +14,5 @@ struct Phenotype {
     var result: Result
     var questions: [Question]
     var answered: Bool
-    var type: Type
+    var type: traitType
 }
