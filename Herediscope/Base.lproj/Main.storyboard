@@ -54,9 +54,9 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="fXP-Xm-UPL"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search here" translatesAutoresizingMaskIntoConstraints="NO" id="SqT-a7-KEr">
-                                <rect key="frame" x="0.0" y="43" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" placeholder="Search here" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SqT-a7-KEr">
+                                <rect key="frame" x="0.0" y="22" width="375" height="56"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="0.0" green="0.27450980392156865" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -66,8 +66,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="03X-us-0gA" secondAttribute="trailing" id="2Ca-hs-0IQ"/>
                             <constraint firstItem="03X-us-0gA" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="2Ep-5c-gUM"/>
                             <constraint firstItem="jXU-zQ-t18" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="5bc-bb-mTy"/>
+                            <constraint firstItem="SqT-a7-KEr" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="K34-yC-iyh"/>
                             <constraint firstItem="03X-us-0gA" firstAttribute="top" secondItem="jXU-zQ-t18" secondAttribute="bottom" id="U3i-Ld-e6X"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="03X-us-0gA" secondAttribute="bottom" id="UkV-eE-cPR"/>
+                            <constraint firstAttribute="trailing" secondItem="SqT-a7-KEr" secondAttribute="trailing" id="apy-7H-nzV"/>
+                            <constraint firstItem="03X-us-0gA" firstAttribute="top" secondItem="SqT-a7-KEr" secondAttribute="bottom" id="bUg-5B-v5M"/>
                             <constraint firstAttribute="trailing" secondItem="jXU-zQ-t18" secondAttribute="trailing" id="pfM-Zv-jz2"/>
                             <constraint firstItem="jXU-zQ-t18" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="yAZ-EI-xib"/>
                         </constraints>
@@ -126,10 +129,10 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="qEF-3v-B3H"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search here " translatesAutoresizingMaskIntoConstraints="NO" id="JYd-AK-zpD">
+                            <searchBar contentMode="redraw" placeholder="Search here " translatesAutoresizingMaskIntoConstraints="NO" id="JYd-AK-zpD">
                                 <rect key="frame" x="0.0" y="22" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.0" green="0.15686274510000001" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.0" green="0.25882352941176467" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -138,10 +141,13 @@
                             <constraint firstItem="nBh-jf-QiY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="64v-Lx-bza"/>
                             <constraint firstItem="oMg-cZ-3sr" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="IY4-8v-WWx"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="nBh-jf-QiY" secondAttribute="bottom" id="L6i-kM-ele"/>
+                            <constraint firstItem="nBh-jf-QiY" firstAttribute="top" secondItem="JYd-AK-zpD" secondAttribute="bottom" id="PFj-J1-rNp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nBh-jf-QiY" secondAttribute="trailing" id="S4g-ue-5oc"/>
                             <constraint firstAttribute="trailing" secondItem="oMg-cZ-3sr" secondAttribute="trailing" id="ZDQ-aT-WXK"/>
                             <constraint firstItem="oMg-cZ-3sr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="fON-vc-LBe"/>
+                            <constraint firstItem="JYd-AK-zpD" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="fjS-41-wqr"/>
                             <constraint firstItem="nBh-jf-QiY" firstAttribute="top" secondItem="oMg-cZ-3sr" secondAttribute="bottom" id="u4H-VU-riS"/>
+                            <constraint firstAttribute="trailing" secondItem="JYd-AK-zpD" secondAttribute="trailing" id="ydp-4G-C5T"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Child" image="child" id="cPa-gy-q4n"/>
@@ -234,22 +240,25 @@
                                     <outlet property="delegate" destination="6A6-tm-VW9" id="14T-z7-dVX"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search here" translatesAutoresizingMaskIntoConstraints="NO" id="fP8-Jc-Nmj">
+                            <searchBar contentMode="redraw" placeholder="Search here" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP8-Jc-Nmj">
                                 <rect key="frame" x="0.0" y="22" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.0" green="0.15686274510000001" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.0" green="0.25882352941176467" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fP8-Jc-Nmj" secondAttribute="trailing" id="0bE-Ec-N9p"/>
                             <constraint firstItem="iYR-no-TOQ" firstAttribute="leading" secondItem="Yta-Td-7fk" secondAttribute="leadingMargin" id="1W8-MA-gs1"/>
                             <constraint firstItem="ijv-wa-7aZ" firstAttribute="top" secondItem="iYR-no-TOQ" secondAttribute="bottom" id="2La-cs-0p6"/>
+                            <constraint firstItem="iYR-no-TOQ" firstAttribute="top" secondItem="fP8-Jc-Nmj" secondAttribute="bottom" id="4da-x9-LPh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iYR-no-TOQ" secondAttribute="trailing" id="53S-8K-Z44"/>
                             <constraint firstItem="iYR-no-TOQ" firstAttribute="top" secondItem="FvK-ot-zNu" secondAttribute="bottom" id="79L-Yb-24C"/>
                             <constraint firstItem="FvK-ot-zNu" firstAttribute="leading" secondItem="Yta-Td-7fk" secondAttribute="leading" id="O8q-St-YfF"/>
                             <constraint firstItem="FvK-ot-zNu" firstAttribute="top" secondItem="Yta-Td-7fk" secondAttribute="top" id="Z6u-I2-b76"/>
                             <constraint firstAttribute="trailing" secondItem="FvK-ot-zNu" secondAttribute="trailing" id="dDT-ro-3Qn"/>
+                            <constraint firstItem="fP8-Jc-Nmj" firstAttribute="leading" secondItem="Yta-Td-7fk" secondAttribute="leading" id="zNS-Jq-Ek4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Reference" image="dictionary" id="E8O-ld-apm"/>

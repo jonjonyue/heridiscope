@@ -15,6 +15,7 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         searchBar.isHidden = true;
         searchBar.isUserInteractionEnabled = false;
+        searchBar.delegate = self;
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -46,8 +47,18 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func searchPressed(_ sender: Any) {
+        searchBar.isHidden = false;
+        searchBar.isUserInteractionEnabled = true;
+        searchBar.showsCancelButton = true;
         
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.isHidden = true;
+        searchBar.isUserInteractionEnabled = false;
+        searchBar.text = "";
+    }
+    
     
 }
 
