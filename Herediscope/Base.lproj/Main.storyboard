@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NAA-s1-jnc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -164,7 +164,11 @@
         <!--Questionnaire View Controller-->
         <scene sceneID="rKq-x6-AL9">
             <objects>
-                <pageViewController storyboardIdentifier="questionnaire" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="SkT-Dz-5Vb" customClass="QuestionnaireViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="questionnaire" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="SkT-Dz-5Vb" customClass="QuestionnaireViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="NAA-s1-jnc" kind="show" identifier="submitAnswers" id="SIn-LU-pfz"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YwX-V3-Dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1721" y="349"/>

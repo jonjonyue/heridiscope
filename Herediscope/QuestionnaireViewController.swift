@@ -83,8 +83,9 @@ class QuestionnaireViewController: UIPageViewController, UIPageViewControllerDat
                 // go to next page in array
                 return self.pages[viewControllerIndex + 1]
             } else {
-                // wrap to first page in array
+                // wrap to first page in arra0y
                 return self.pages.first
+//                return self.pages[viewControllerIndex]
             }
         }
         return nil

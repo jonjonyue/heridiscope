@@ -137,11 +137,11 @@
 			children = (
 				2023B8FA1FA42ECE00AEA52F /* AppDelegate.swift */,
 				2023B8FC1FA42ECE00AEA52F /* YourViewController.swift */,
-				20E5529B1FA5408B0018A5D0 /* ResultViewController.swift */,
 				2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */,
 				205321F21FA43C3F00683CBD /* DictionaryViewController.swift */,
 				20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */,
 				20E552991FA523630018A5D0 /* QuestionViewController.swift */,
+				20E5529B1FA5408B0018A5D0 /* ResultViewController.swift */,
 				2023B9001FA42ECE00AEA52F /* Main.storyboard */,
 				2023B9031FA42ECE00AEA52F /* Assets.xcassets */,
 				2053220D1FA4643700683CBD /* herediscope font.png */,
