@@ -11,5 +11,7 @@ import Foundation
 enum Genotype {
     case Expressed
     case NonExpressed
+    case Homozygous
+    case Heterozygous
     case NotSet
 }
