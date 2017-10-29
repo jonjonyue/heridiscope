@@ -51,7 +51,7 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return array.size
         if isSearching == false {
-        return phenoTypeCache.count
+            return phenoTypeCache.count
         } else {
             return filteredData.count
         }
@@ -61,7 +61,7 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath);
         if isSearching == false {
-        cell.textLabel?.text = phenoTypeCache[indexPath.row].name;
+            cell.textLabel?.text = phenoTypeCache[indexPath.row].name;
         } else {
             cell.textLabel?.text = filteredData[indexPath.row].name;
         }
@@ -77,36 +77,38 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
             if let path = Bundle.main.path(forResource: "phenotypes", ofType: "json") {
                 print("Connected to file")
                 let jsonResult = self.getJSON(path: path)
-                
                 // do stuff yy
                 print("Found Data")
                 print(jsonResult)
                 for result in jsonResult.arrayValue {
-                    let name = result["name"].stringValue
-                    let description = result["description"].stringValue
-                    var questions: [Question] = []
-                    for question in result["questions"].arrayValue {
-                        let temp = Question(name: question["name"].stringValue, type: question["type"].stringValue, options: question["options"].arrayValue.map { $0.stringValue}, text: question["text"].stringValue)
-                        questions.append(temp)
+                    
+                    if (result["child"].boolValue == false) {
+                        let name = result["name"].stringValue
+                        let description = result["description"].stringValue
+                        var questions: [Question] = []
+                        for question in result["questions"].arrayValue {
+                            let temp = Question(name: question["name"].stringValue, type: question["type"].stringValue, options: question["options"].arrayValue.map { $0.stringValue}, text: question["text"].stringValue)
+                            questions.append(temp)
+                        }
+                        let answered = result["answered"].boolValue
+                        let buf = result["type"].stringValue
+                        var type: traitType = traitType.AutosomalDominant
+                        switch buf {
+                        case "AutosomalDominant":
+                            type = traitType.AutosomalDominant
+                        case "AutosomalRecessive":
+                            type = traitType.AutosomalRecessive
+                        case "SexLinkedDominant":
+                            type = traitType.SexLinkedDominant
+                        case "SexLinkedRecessive":
+                            type = traitType.SexLinkedRecessive
+                        default:
+                            type = traitType.AutosomalDominant
+                        }
+                        self.phenoTypeCache.append(Phenotype(n: name, d: description, q: questions, a: answered, t: type))
+                        print("Recording Data")
+                        print(self.phenoTypeCache)
                     }
-                    let answered = result["answered"].boolValue
-                    let buf = result["type"].stringValue
-                    var type: traitType = traitType.AutosomalDominant
-                    switch buf {
-                    case "AutosomalDominant":
-                        type = traitType.AutosomalDominant
-                    case "AutosomalRecessive":
-                        type = traitType.AutosomalRecessive
-                    case "SexLinkedDominant":
-                        type = traitType.SexLinkedDominant
-                    case "SexLinkedRecessive":
-                        type = traitType.SexLinkedRecessive
-                    default:
-                        type = traitType.AutosomalDominant
-                    }
-                    self.phenoTypeCache.append(Phenotype(n: name, d: description, q: questions, a: answered, t: type))
-                    print("Recording Data")
-                    print(self.phenoTypeCache)
                 }
             }
             print("Reloading Tableview")
@@ -140,9 +142,9 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
             isSearching = false
-              view.endEditing(true)
-              tableView.reloadData()
-          } else {
+            view.endEditing(true)
+            tableView.reloadData()
+        } else {
             isSearching = true
             filteredData = phenoTypeCache.filter({ $0.name.range(of: searchBar.text!, options: [.anchored, .caseInsensitive, .diacriticInsensitive]) != nil })
             tableView.reloadData()
@@ -164,7 +166,7 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
         searchBar.isUserInteractionEnabled = false;
         searchBar.text = "";
     }
-        
+    
     
     
     

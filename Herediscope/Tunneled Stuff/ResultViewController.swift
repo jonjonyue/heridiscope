@@ -10,10 +10,26 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    var percent: Double!
+    var thePhenotype: Phenotype!
+    @IBOutlet weak var resultTextView: UITextView!
+    @IBOutlet weak var diseaseTextLabel: UILabel!
+    
+    @IBOutlet weak var resultText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("TEST")
-
+        if (percent == -1.0) {
+            resultText.text = "We cannot accurately predict a result given your inputs"
+        } else {
+        resultText.text = "There is a " + String(percent) + "% of having " + thePhenotype.name
+        }
+        resultTextView.text = thePhenotype.description;
+        diseaseTextLabel.text = thePhenotype.name;
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -33,9 +49,7 @@ class ResultViewController: UIViewController {
     }
     */
     @IBAction func done(_ sender: Any) {
-        dismiss(animated: true, completion: nil);
-        
-        
+        performSegue(withIdentifier: "backHome", sender: self)
     }
     
 }

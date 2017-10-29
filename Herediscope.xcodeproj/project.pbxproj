@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		201885891FA5762000A2EC26 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201885881FA5762000A2EC26 /* DetailedViewController.swift */; };
 		201885901FA5983200A2EC26 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2018858D1FA5983000A2EC26 /* QuestionViewController.swift */; };
-		201885911FA5983200A2EC26 /* DiseaseDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2018858E1FA5983000A2EC26 /* DiseaseDict.swift */; };
 		201885921FA5983200A2EC26 /* QuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2018858F1FA5983100A2EC26 /* QuestionnaireViewController.swift */; };
+		201885961FA59D2900A2EC26 /* DiseaseDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201885951FA59D2900A2EC26 /* DiseaseDict.swift */; };
 		2023B8FB1FA42ECE00AEA52F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023B8FA1FA42ECE00AEA52F /* AppDelegate.swift */; };
 		2023B8FD1FA42ECE00AEA52F /* YourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023B8FC1FA42ECE00AEA52F /* YourViewController.swift */; };
 		2023B8FF1FA42ECE00AEA52F /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */; };
@@ -37,7 +37,6 @@
 		8ECF42911FA547E400549FA9 /* QuestionPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF42871FA547E300549FA9 /* QuestionPageView.swift */; };
 		8ECF42921FA547E400549FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ECF42881FA547E400549FA9 /* Assets.xcassets */; };
 		8ECF42931FA547E400549FA9 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF42891FA547E400549FA9 /* ResultViewController.swift */; };
-		8ECF42941FA547E400549FA9 /* DiseaseDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF428A1FA547E400549FA9 /* DiseaseDict.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +59,8 @@
 /* Begin PBXFileReference section */
 		201885881FA5762000A2EC26 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		2018858D1FA5983000A2EC26 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		2018858E1FA5983000A2EC26 /* DiseaseDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiseaseDict.swift; sourceTree = "<group>"; };
 		2018858F1FA5983100A2EC26 /* QuestionnaireViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewController.swift; sourceTree = "<group>"; };
+		201885951FA59D2900A2EC26 /* DiseaseDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiseaseDict.swift; sourceTree = "<group>"; };
 		2023B8F71FA42ECE00AEA52F /* Herediscope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Herediscope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2023B8FA1FA42ECE00AEA52F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2023B8FC1FA42ECE00AEA52F /* YourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +93,6 @@
 		8ECF42871FA547E300549FA9 /* QuestionPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPageView.swift; sourceTree = "<group>"; };
 		8ECF42881FA547E400549FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ECF42891FA547E400549FA9 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		8ECF428A1FA547E400549FA9 /* DiseaseDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiseaseDict.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,10 +213,9 @@
 		205322061FA456CC00683CBD /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
-				2018858E1FA5983000A2EC26 /* DiseaseDict.swift */,
 				205321F41FA4412400683CBD /* Questions.swift */,
 				205321F81FA444BC00683CBD /* Phenotypes.swift */,
-				8ECF428A1FA547E400549FA9 /* DiseaseDict.swift */,
+				201885951FA59D2900A2EC26 /* DiseaseDict.swift */,
 				205321FE1FA4515900683CBD /* Genotypes.swift */,
 				205322041FA4569E00683CBD /* Gender.swift */,
 				20E5528D1FA4BBF30018A5D0 /* Type.swift */,
@@ -381,7 +378,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201885911FA5983200A2EC26 /* DiseaseDict.swift in Sources */,
 				205322051FA4569E00683CBD /* Gender.swift in Sources */,
 				8ECF42931FA547E400549FA9 /* ResultViewController.swift in Sources */,
 				205321FB1FA44EA300683CBD /* AutosomalDominant.swift in Sources */,
@@ -394,8 +390,8 @@
 				201885901FA5983200A2EC26 /* QuestionViewController.swift in Sources */,
 				205322031FA4568400683CBD /* SexLinkedDominant.swift in Sources */,
 				8ECF428C1FA547E400549FA9 /* LoadingViewController.swift in Sources */,
-				8ECF42941FA547E400549FA9 /* DiseaseDict.swift in Sources */,
 				205321F51FA4412400683CBD /* Questions.swift in Sources */,
+				201885961FA59D2900A2EC26 /* DiseaseDict.swift in Sources */,
 				205321FF1FA4515900683CBD /* Genotypes.swift in Sources */,
 				201885891FA5762000A2EC26 /* DetailedViewController.swift in Sources */,
 				205322091FA459B000683CBD /* SexLinkedRecessive.swift in Sources */,

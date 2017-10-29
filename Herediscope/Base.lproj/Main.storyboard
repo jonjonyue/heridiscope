@@ -155,6 +155,7 @@
                     <connections>
                         <outlet property="searchBar" destination="JYd-AK-zpD" id="PAV-mq-KZg"/>
                         <outlet property="tableView" destination="nBh-jf-QiY" id="xk5-Hn-L23"/>
+                        <segue destination="SkT-Dz-5Vb" kind="show" identifier="toQuestionnaire" id="mn4-r4-sjX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -166,7 +167,7 @@
             <objects>
                 <pageViewController storyboardIdentifier="questionnaire" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="SkT-Dz-5Vb" customClass="QuestionnaireViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="NAA-s1-jnc" kind="show" identifier="submitAnswers" id="SIn-LU-pfz"/>
+                        <segue destination="NAA-s1-jnc" kind="show" identifier="submitAnswers" id="RH2-aB-wU4"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YwX-V3-Dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -202,7 +203,7 @@
                     </view>
                     <connections>
                         <outlet property="animationView" destination="iMH-aR-trW" id="S3I-O9-jWo"/>
-                        <segue destination="1PX-4x-i67" kind="showDetail" identifier="toResult" id="3Oc-3u-8Xk"/>
+                        <segue destination="1PX-4x-i67" kind="show" identifier="toResult" action="showDetailViewController:sender:" id="3Oc-3u-8Xk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9x-O1-5M1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -235,6 +236,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCc-sG-e8E">
+                                <rect key="frame" x="16" y="115" width="343" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.25882352939999997" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Veb-1P-zdf">
+                                <rect key="frame" x="16" y="264" width="343" height="351"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CHq-0c-ugT">
+                                <rect key="frame" x="16" y="183" width="343" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -243,6 +267,12 @@
                             <constraint firstItem="7Sh-7P-kR7" firstAttribute="leading" secondItem="iyG-5K-2cQ" secondAttribute="leading" id="ttz-SG-eMx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diseaseTextLabel" destination="rCc-sG-e8E" id="LGc-wq-dhq"/>
+                        <outlet property="resultText" destination="CHq-0c-ugT" id="zEL-v3-fdy"/>
+                        <outlet property="resultTextView" destination="Veb-1P-zdf" id="6Vc-11-sP3"/>
+                        <segue destination="49e-Tb-3d3" kind="showDetail" identifier="backHome" id="j82-Z5-uUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQR-x8-RjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -405,4 +435,7 @@
         <image name="search" width="25" height="25"/>
         <image name="your" width="48" height="48"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mn4-r4-sjX"/>
+    </inferredMetricsTieBreakers>
 </document>

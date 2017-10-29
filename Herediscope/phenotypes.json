@@ -8,7 +8,7 @@
                            "Yes",
                            "No"
                            ],
-               "text": "Does your mother have Hypophosphatemic Rickets? What gender is the child?"
+               "text": "Does your mother have Hypophosphatemic Rickets?"
                },
                {
                "name": "Father’s Hypophosphatemic Rickets",
@@ -17,7 +17,7 @@
                            "Yes",
                            "No"
                            ],
-               "text": "Does your father have? What gender is the child?"
+               "text": "Does your father have Hypophosphatemic Rickets?"
                },
                {
                "name": "Child's Gender",
@@ -186,6 +186,156 @@
                            "No"
                            ],
                "text": "Does your father have a widow's peak?"
+               }],
+ "answered": false,
+ "child": true,
+ "type": "Autosomal Dominant"
+ },
+ {
+ "name": "Attached earlobes",
+ "description": "The human earlobe (lobulus auriculae) is composed of tough areolar and adipose connective tissues, lacking the firmness and elasticity of the rest of the auricle (the external structure of the ear). In some cases the lower lobe is connected to the side of the face. Since the earlobe does not contain cartilage it has a large blood supply and may help to warm the ears and maintain balance.",
+ "questions": [{
+               "name": "Mother’s earlobes",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your mother have attached earlobes?"
+               },
+               {
+               "name": "Father’s earlobes",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your Father have attached earlobes?"
+               }],
+ "answered": false,
+ "child": true,
+ "type": "Autosomal Dominant"
+ },
+ {
+ "name": "Rolling tongue",
+ "description": "Most people, when first asked, either can easily roll their tongue (here called \"R\"), or cannot roll it at all (\"NR\"). The proportion of people who can roll their tongue ranges from 65 to 81 percent, with a slightly higher proportion of tongue-rollers in females than in males (Sturtevant 1940, Urbanowski and Wilson 1947, Liu and Hsu 1949, Komai 1951, Lee 1955). However, some people, especially children, cannot roll their tongue when first asked but later learn to do so (Sturtevant 1940). Komai (1951) found that the proportion of tongue-rollers among Japanese schoolchildren increased from 54 percent at ages 6-7 to 76 percent at age 12, suggesting that over 20 percent of the population learns to tongue-roll during that age range. That some people learn to roll their tongues after first being unable to is the first evidence that this is not a simple genetic character. There are also some people who can only slightly roll the edges of their tongue and cannot easily be classified as rollers or non-rollers (Reedy et al. 1971).",
+ "questions": [{
+               "name": "Mother’s rolling tongue",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Can your mother roll her tongue?"
+               },
+               {
+               "name": "Father’s rolling tongue",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Can your Father roll his tongue?"
+               }],
+ "answered": false,
+ "child": true,
+ "type": "Autosomal Dominant"
+ },
+ {
+ "name": "Dimples",
+ "description": "Cheek dimples when present, show up when a person makes a facial expression. A chin dimple is a small line on the chin that stays on the chin without making any facial expressions. Dimples may appear and disappear over an extended period.",
+ "questions": [{
+               "name": "Mother’s dimples",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your mother have a dimple?"
+               },
+               {
+               "name": "Father’s dimples",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your father have a dimple?"
+               }],
+ "answered": false,
+ "child": true,
+ "type": "Autosomal Dominant"
+ },
+ {
+ "name": "Cleft Chin",
+ "description": "Cleft chins come in a variety of shapes, including vertical furrows, Y-shaped furrows, and round dimples. They also vary in depth from barely noticeable to extremely prominent.",
+ "questions": [{
+               "name": "Mother’s cleft chin",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your mother have a cleft chin?"
+               },
+               {
+               "name": "Father’s cleft chin",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your mother have a cleft chin?"
+               }],
+ "answered": false,
+ "child": true,
+ "type": "Autosomal Dominant"
+ },
+ {
+ "name": "Hitchhiker's Thumb",
+ "description": "Hitchhiker's thumb is otherwise known as distal hyperextensibility of the thumb. This is because of the genetic traits that make a person bend his thumb backward while stretching.",
+ "questions": [{
+               "name": "Mother’s Hitchhiker’s thumb ",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your mother have a Hitchhiker’s thumb?"
+               },
+               {
+               "name": "Father’s Hitchhiker’s thumb ",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your father have a Hitchhiker’s thumb?"
+               }],
+ "answered": false,
+ "child": true,
+ "type": "Autosomal Dominant"
+ },
+ {
+ "name": "Freckles",
+ "description": "Freckles are flat small tan or light-brown spots on sun-exposed skin. Common freckles themselves are quite harmless and never develop into skin cancer.",
+ "questions": [{
+               "name": "Mother’s Freckles ",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your mother have freckles?"
+               },
+               {
+               "name": "Father’s Freckles ",
+               "type": "picker",
+               "options": [
+                           "Yes",
+                           "No"
+                           ],
+               "text": "Does your father have freckles?"
                }],
  "answered": false,
  "child": true,

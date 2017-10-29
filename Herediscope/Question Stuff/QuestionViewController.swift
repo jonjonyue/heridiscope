@@ -8,13 +8,17 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    var question: Question?
+    var question: Question!
     var firstButton: UIButton = UIButton()
     var secondButton: UIButton = UIButton()
+    var submitButton: UIButton = UIButton()
+    var picker: UIPickerView = UIPickerView()
     var light: UIColor = UIColor(red: 0.788, green: 0.843, blue: 1.0, alpha: 1.0)
     var dark: UIColor = UIColor(red: 0.220, green: 0.576, blue: 0.93, alpha: 1.0)
+    
+    var types: [String] = ["Heterozygous", "Homozygous", "I don't know"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +33,26 @@ class QuestionViewController: UIViewController {
         questionText.isEditable = false
         view.addSubview(questionText)
         
-        firstButton = UIButton(frame: CGRect(x: 20, y: ((view.frame.height - 20) / 3) - 10, width: view.frame.width - 40, height: (view.frame.height / 4) - view.frame.height / 6))
+        firstButton = UIButton(frame: CGRect(x: 20, y: ((view.frame.height - 20) / 3) + 40, width: view.frame.width - 40, height: (view.frame.height / 4) - view.frame.height / 6))
         firstButton.backgroundColor = light
         firstButton.setTitle(question!.options[0], for: .normal)
         firstButton.addTarget(self, action: #selector(self.buttonClicked), for: .touchUpInside)
         view.addSubview(firstButton)
         
         
-        secondButton = UIButton(frame: CGRect(x: 20, y: ((view.frame.height - 20) / 3) + 100, width: view.frame.width - 40, height: (view.frame.height / 4) - view.frame.height / 6))
+        secondButton = UIButton(frame: CGRect(x: 20, y: ((view.frame.height - 20) / 3) + 150, width: view.frame.width - 40, height: (view.frame.height / 4) - view.frame.height / 6))
         secondButton.backgroundColor = light
         secondButton.setTitle(question!.options[1], for: .normal)
         secondButton.addTarget(self, action: #selector(self.buttonClicked), for: .touchUpInside)
         view.addSubview(secondButton)
+        
+        picker.delegate = self
+        picker.dataSource = self
+        picker.frame = CGRect(x: (view.frame.width - picker.frame.width) / 2, y: view.frame.height * 2 / 3 - 50, width: picker.frame.width, height: picker.frame.height)
+        picker.isUserInteractionEnabled = true
+        view.addSubview(picker)
+        
+        print(question.options)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +61,7 @@ class QuestionViewController: UIViewController {
     }
     
     @objc func buttonClicked(_ sender: Any) {
+        
         print("Button Press")
         let buf = sender as! UIButton
         buf.backgroundColor = dark
@@ -57,6 +70,24 @@ class QuestionViewController: UIViewController {
         } else {
             firstButton.backgroundColor = light
         }
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return types.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return types[row]
+    }
+    
+    // Catpure the picker view selection
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
     }
     /*
     // MARK: - Navigation
