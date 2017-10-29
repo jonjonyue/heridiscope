@@ -111,6 +111,7 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             print("Reloading Tableview")
             DispatchQueue.main.async {
+                self.phenoTypeCache.sort { $0.name < $1.name }
                 self.tableView.reloadData()
             }
         }
