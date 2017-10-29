@@ -83,8 +83,9 @@ class QuestionnaireViewController: UIPageViewController, UIPageViewControllerDat
                 // go to next page in array
                 return self.pages[viewControllerIndex + 1]
             } else {
-                // wrap to first page in array
+                // wrap to first page in arra0y
                 return self.pages.first
+//                return self.pages[viewControllerIndex]
             }
         }
         return nil
@@ -92,7 +93,7 @@ class QuestionnaireViewController: UIPageViewController, UIPageViewControllerDat
 
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
-        // set the pageControl.currentPage to the index of the current viewController in pages
+        // set  the pageControl.currentPage to the index of the current viewController in pages
         if let viewControllers = pageViewController.viewControllers {
             if let viewControllerIndex = self.pages.index(of: viewControllers[0]) {
                 self.pageControl.currentPage = viewControllerIndex

@@ -2,7 +2,7 @@
 //  YourViewController.swift
 //  Herediscope
 //
-//  Created by Jonathan yue on 10/27/17.
+//  Created by Jonathan yue on 10/27/17. 
 //  Copyright © 2017 Genesis. All rights reserved.
 //
 
@@ -84,8 +84,6 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
                 for result in jsonResult.arrayValue {
                     let name = result["name"].stringValue
                     let description = result["description"].stringValue
-                    let diagnosis = result["result"]["diagnosis"].stringValue
-                    let action = result["result"]["action"].stringValue
                     var questions: [Question] = []
                     for question in result["questions"].arrayValue {
                         let temp = Question(name: question["name"].stringValue, type: question["type"].stringValue, options: question["options"].arrayValue.map { $0.stringValue}, text: question["text"].stringValue)
@@ -106,7 +104,7 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
                     default:
                         type = traitType.AutosomalDominant
                     }
-                    self.phenoTypeCache.append(Phenotype(n: name, d: description, r: Result(diagnosis: diagnosis, action: action), q: questions, a: answered, t: type))
+                    self.phenoTypeCache.append(Phenotype(n: name, d: description, q: questions, a: answered, t: type))
                     print("Recording Data")
                     print(self.phenoTypeCache)
                 }

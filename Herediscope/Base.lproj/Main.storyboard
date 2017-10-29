@@ -164,7 +164,11 @@
         <!--Questionnaire View Controller-->
         <scene sceneID="rKq-x6-AL9">
             <objects>
-                <pageViewController storyboardIdentifier="questionnaire" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="SkT-Dz-5Vb" customClass="QuestionnaireViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="questionnaire" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="SkT-Dz-5Vb" customClass="QuestionnaireViewController" customModule="Herediscope" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="NAA-s1-jnc" kind="show" identifier="submitAnswers" id="SIn-LU-pfz"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YwX-V3-Dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1721" y="349"/>
