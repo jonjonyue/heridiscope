@@ -44,7 +44,12 @@ class YourViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? QuestionnaireViewController {
-            viewController.thePhenotype = phenoTypeCache[index]
+            if isSearching {
+                viewController.thePhenotype = filteredData[index]
+            } else {
+                viewController.thePhenotype = phenoTypeCache[index]
+            }
+            
         }
     }
     

@@ -78,7 +78,7 @@ class QuestionnaireViewController: UIPageViewController, UIPageViewControllerDat
         if let viewControllerIndex = self.pages.index(of: viewController as! QuestionViewController) {
             if viewControllerIndex == 0 {
                 // wrap to last page in array
-                return self.pages.last
+//                return self.pages[0]
             } else {
                 // go to previous page in array
                 return self.pages[viewControllerIndex - 1]
