@@ -11,7 +11,7 @@ import UIKit
 class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!    
-    
+
     override func viewDidLoad() {
         searchBar.isHidden = true;
         searchBar.isUserInteractionEnabled = false;

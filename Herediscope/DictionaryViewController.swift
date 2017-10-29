@@ -12,14 +12,18 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    var diseaseDictCache: [DiseaseDict] = []
+    var filteredData: [DiseaseDict] = []
+    var isSearching = false
     
-    var example = ["eye color", "hair type", "double eyelids", "sex"];
-
     override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
         searchBar.delegate = self;
         searchBar.isHidden = true;
         searchBar.isUserInteractionEnabled = false;
         self.navigationController?.navigationBar.isTranslucent = false;
+        loadData()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -40,16 +44,74 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return array.size
-        return example.count;
+        return diseaseDictCache.count;
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath);
-        cell.textLabel?.text = example[indexPath.row];
+        print(diseaseDictCache[indexPath.row].name)
+        cell.textLabel?.text = diseaseDictCache[indexPath.row].name;
         return cell;
     }
     
+    
+    func loadData() {
+        print("Trying to fetch Data")
+        let customSerialQueue = DispatchQueue(label: "popularLoad")
+        customSerialQueue.async {
+            if let path = Bundle.main.path(forResource: "diseaseDict", ofType: "json") {
+                print("Connected to file")
+                let jsonResult = self.getJSON(path: path)
+                
+                print("Found Data")
+                print(jsonResult)
+                for result in jsonResult.arrayValue {
+                    let name = result["name"].stringValue
+                    let description = result["description"].stringValue
+                    self.diseaseDictCache.append(DiseaseDict(name: name, description: description))
+                    print("Recording Data")
+                    print(self.diseaseDictCache)
+                }
+            }
+            print("Reloading Tableview")
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    private func getJSON(path: String) -> JSON {
+        let url = URL(fileURLWithPath: path)
+        print(url)
+        do {
+            let data = try Data(contentsOf: url)
+            print(data)
+            print("Got Data")
+            let json = try JSON(data: data)
+            print("Got json")
+            return json
+        } catch {
+            print("JSON failed to load")
+            return JSON.null
+        }
+    }
+    
+    
+    
+    //MARK: Search Bar Delegate
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            isSearching = false
+            view.endEditing(true)
+            tableView.reloadData()
+        } else {
+            isSearching = true
+            filteredData = diseaseDictCache.filter({ $0.name.range(of: searchBar.text!, options: [.anchored, .caseInsensitive, .diacriticInsensitive]) != nil })
+            tableView.reloadData()
+        }
+    }
     
     /*
     // MARK: - Navigation
