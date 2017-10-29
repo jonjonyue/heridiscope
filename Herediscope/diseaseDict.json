@@ -29,7 +29,7 @@
   },
   
   {
-  "name": "Down Snydrome",
+  "name": "Down Syndrome",
   "description": "Down syndrome is a genetic disorder caused when abnormal cell division results in an extra full or partial copy of chromosome 21. This extra genetic material causes the developmental changes and physical features of Down syndrome.\n Down syndrome varies in severity among individuals, causing lifelong intellectual disability and developmental delays. It's the most common genetic chromosomal disorder and cause of learning disabilities in children. It also commonly causes other medical abnormalities, including heart and gastrointestinal disorders. \n Better understanding of Down syndrome and early interventions can greatly increase the quality of life for children and adults with this disorder and help them live fulfilling lives."
   },
   
@@ -126,6 +126,19 @@
   {
   "name": "Cori's Disease",
   "description": "Cori’s Disease also known as glycogen storage disease type III is an inherited disorder caused by the buildup of a complex sugar called glycogen in the body's cells. The accumulated glycogen is structurally abnormal and impairs the function of certain organs and tissues, especially the liver and muscles. \n GSDIII is divided into types IIIa, IIIb, IIIc, and IIId, which are distinguished by their pattern of signs and symptoms. GSD types IIIa and IIIc mainly affect the liver and muscles, and GSD types IIIb and IIId typically affect only the liver. It is very difficult to distinguish between the types of GSDIII that affect the same tissues. GSD types IIIa and IIIb are the most common forms of this condition."
+  },
+  {
+  "name": "Hypophosphatemic Rickets",
+  "description": "Hereditary hypophosphatemic rickets is a disorder related to low levels of phosphate in the blood (hypophosphatemia). Phosphate is a mineral that is essential for the normal formation of bones and teeth. \n In most cases, the signs and symptoms of hereditary hypophosphatemic rickets begin in early childhood. The features of the disorder vary widely, even among affected members of the same family. Mildly affected individuals may have hypophosphatemia without other signs and symptoms. More severely affected children experience slow growth and are shorter than their peers. They develop bone abnormalities that can interfere with movement and cause bone pain. The most noticeable of these abnormalities are bowed legs or knock knees (a condition in which the lower legs are positioned at an outward angle). These abnormalities become apparent with weight-bearing activities such as walking. If untreated, they tend to worsen with time.\n Other signs and symptoms of hereditary hypophosphatemic rickets can include premature fusion of the skull bones (craniosynostosis) and dental abnormalities. The disorder may also cause abnormal bone growth where ligaments and tendons attach to joints (enthesopathy). In adults, hypophosphatemia is characterized by a softening of the bones known as osteomalacia.\n Researchers have described several forms of hereditary hypophosphatemic rickets, which are distinguished by their pattern of inheritance and genetic cause. The most common form of the disorder is known as X-linked hypophosphatemic rickets (XLH). It has an X-linked dominant pattern of inheritance. X-linked recessive, autosomal dominant, and autosomal recessive forms of the disorder are much rarer. \n Another rare type of the disorder is known as hereditary hypophosphatemic rickets with hypercalciuria (HHRH). In addition to hypophosphatemia, this condition is characterized by the excretion of high levels of calcium in the urine (hypercalciuria)."
+  },
+  
+  {
+  "name": "Marfan Syndrome",
+  "description": "Marfan syndrome is an inherited disorder that affects connective tissue — the fibers that support and anchor your organs and other structures in your body. Marfan syndrome most commonly affects the heart, eyes, blood vessels and skeleton.\n People with Marfan syndrome are usually tall and thin with disproportionately long arms, legs, fingers and toes. The damage caused by Marfan syndrome can be mild or severe. If your aorta — the large blood vessel that carries blood from your heart to the rest of your body — is affected, the condition can become life-threatening. \n Treatment usually includes medications to keep your blood pressure low to reduce the strain on your aorta. Regular monitoring to check for damage progression is vital. Many people with Marfan syndrome eventually require preventive surgery to repair the aorta."
+  },
+  {
+  "name": "Huntington's Disease",
+  "description": "Huntington's disease is an inherited disease that causes the progressive breakdown (degeneration) of nerve cells in the brain. Huntington's disease has a broad impact on a person's functional abilities and usually results in movement, thinking (cognitive) and psychiatric disorders. \n Most people with Huntington's disease develop signs and symptoms in their 30s or 40s. But the disease may emerge earlier or later in life. \n When the disease develops before age 20, the condition is called juvenile Huntington's disease. An earlier emergence of the disease often results in a somewhat different set of symptoms and faster disease progression.\n Medications are available to help manage the symptoms of Huntington's disease, but treatments can't prevent the physical, mental and behavioral decline associated with the condition."
   }
   
   ]

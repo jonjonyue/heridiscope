@@ -177,9 +177,14 @@
 				8ECF42851FA547E300549FA9 /* diseaseDict.json */,
 				2023B8FC1FA42ECE00AEA52F /* YourViewController.swift */,
 				2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */,
+<<<<<<< HEAD
 				205321F21FA43C3F00683CBD /* DictionaryViewController.swift */,
 				2018858A1FA5931A00A2EC26 /* Question Stuff */,
 				2018858C1FA593B200A2EC26 /* Tunneled Stuff */,
+=======
+				20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */,
+				20E552991FA523630018A5D0 /* QuestionViewController.swift */,
+>>>>>>> 6fa330afd2cb1773231d2aae66da2ea99cd1ed9b
 				2023B9001FA42ECE00AEA52F /* Main.storyboard */,
 				2018858B1FA5938F00A2EC26 /* Images */,
 				2023B9051FA42ECE00AEA52F /* LaunchScreen.storyboard */,
