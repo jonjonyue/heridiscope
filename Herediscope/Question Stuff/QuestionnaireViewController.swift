@@ -15,6 +15,11 @@ class QuestionnaireViewController: UIPageViewController, UIPageViewControllerDat
     var pages = [UIViewController]()
     let pageControl = UIPageControl()
     
+    var double: Double = 0.0
+    var mother: Genotype = Genotype.NotSet
+    var father: Genotype = Genotype.NotSet
+    var child: Gender = Gender.Female
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,6 +103,20 @@ class QuestionnaireViewController: UIPageViewController, UIPageViewControllerDat
             if let viewControllerIndex = self.pages.index(of: viewControllers[0]) {
                 self.pageControl.currentPage = viewControllerIndex
             }
+        }
+    }
+    
+    public func addToAnswer(question: Question, person: String, type: Gender) {
+        switch question.type {
+        case "Autosomal Dominant":
+            
+        case "Autosomal Recessive":
+            
+        case "SexLinked Dominant":
+            
+        case "SexLinked Recessive":
+            
+        default:
         }
     }
 }

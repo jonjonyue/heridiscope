@@ -15,6 +15,7 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
     var diseaseDictCache: [DiseaseDict] = []
     var filteredData: [DiseaseDict] = []
     var isSearching = false
+    var index: Int = 0
   
     
     override func viewDidLoad() {
@@ -40,11 +41,19 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        if isSearching {
-            
-        } else {
-            
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Making Detailed")
+        index = indexPath.row
+        performSegue(withIdentifier: "toDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailedViewController = segue.destination as? DetailedViewController {
+            if isSearching {
+                detailedViewController.disease = filteredData[index]
+            } else {
+                detailedViewController.disease = diseaseDictCache[index]
+            }
         }
     }
     
