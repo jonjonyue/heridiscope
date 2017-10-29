@@ -1,19 +1,28 @@
 //
-//  InfoViewController.swift
+//  DetailedViewController.swift
 //  Herediscope
 //
-//  Created by Taehoon Bang on 10/28/17.
+//  Created by Jonathan yue on 10/28/17.
 //  Copyright © 2017 Genesis. All rights reserved.
 //
 
 import UIKit
 
-class InfoViewController: UIViewController {
+class DetailedViewController: UIViewController {
 
+    var disease: DiseaseDict!
+    
+    @IBOutlet weak var diseaseTitle: UITextView!
+    
+    @IBOutlet weak var diseaseDescription: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        diseaseTitle.text = disease.name
+        diseaseDescription.text = "    " + disease.description
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +41,7 @@ class InfoViewController: UIViewController {
     }
     */
 
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
