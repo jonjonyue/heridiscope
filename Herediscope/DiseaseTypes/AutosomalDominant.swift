@@ -24,14 +24,61 @@ class AutosomalDominant {
     
     func percentage() -> Double {
         var ans: Double = 0.0;
-        if (parent1 == Genotype.Expressed) {
-            if(parent2 == Genotype.Expressed) {
-                ans = 87.5;
-            } else {
-                ans = 75.0;
+        switch parent1 {
+        case Genotype.Expressed:
+            switch parent2 {
+            case Genotype.Expressed:
+                ans = 87.5
+            case Genotype.NonExpressed:
+                ans = 75.0
+            case Genotype.Homozygous:
+                ans = 100.0
+            case Genotype.Heterozygous:
+                ans = 87.5
+            default:
+                ans = 85.0 // THIS IS SUS o.O
             }
-        } else if (parent2 == Genotype.Expressed) {
-            ans = 75.0;
+        case Genotype.Heterozygous:
+            switch parent2 {
+            case Genotype.Expressed:
+                ans = 87.5
+            case Genotype.NonExpressed:
+                ans = 50.0
+            case Genotype.Homozygous:
+                ans = 100.0
+            case Genotype.Heterozygous:
+                ans = 87.5
+            default:
+                ans = 75.0
+            }
+        case Genotype.Homozygous:
+            ans = 100.0
+        case Genotype.NonExpressed:
+            switch parent2 {
+            case Genotype.Expressed:
+                ans = 75.0
+            case Genotype.NonExpressed:
+                ans = 0.0
+            case Genotype.Homozygous:
+                ans = 100.0
+            case Genotype.Heterozygous:
+                ans = 50.0
+            default:
+                ans = 50.0
+            }
+        default:
+            switch parent2 {
+            case Genotype.Expressed:
+                ans = 85.0
+            case Genotype.NonExpressed:
+                ans = 50.0
+            case Genotype.Homozygous:
+                ans = 100.0
+            case Genotype.Heterozygous:
+                ans = 75.0
+            default:
+                ans = -1.0
+            }
         }
         return ans;
     }
