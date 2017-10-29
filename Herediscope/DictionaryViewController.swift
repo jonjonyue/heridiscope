@@ -15,6 +15,7 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
     var diseaseDictCache: [DiseaseDict] = []
     var filteredData: [DiseaseDict] = []
     var isSearching = false
+  
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -24,6 +25,7 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
         searchBar.isUserInteractionEnabled = false;
         self.navigationController?.navigationBar.isTranslucent = false;
         loadData()
+
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -39,19 +41,29 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
+        if isSearching {
+            
+        } else {
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return array.size
+        if isSearching {
+            return filteredData.count;
+        }
         return diseaseDictCache.count;
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath);
-        print(diseaseDictCache[indexPath.row].name)
-        cell.textLabel?.text = diseaseDictCache[indexPath.row].name;
+        if isSearching {
+        cell.textLabel?.text = filteredData[indexPath.row].name;
+        } else {
+            cell.textLabel?.text = diseaseDictCache[indexPath.row].name;
+        }
         return cell;
     }
     
@@ -75,6 +87,8 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
             print("Reloading Tableview")
+            self.diseaseDictCache.sort { $0.name < $1.name }
+
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

@@ -157,8 +157,8 @@
 				205321F21FA43C3F00683CBD /* DictionaryViewController.swift */,
 				2023B8FE1FA42ECE00AEA52F /* ChildViewController.swift */,
 				20E552911FA4E1DA0018A5D0 /* QuestionnaireViewController.swift */,
+				8ECF42951FA55F7C00549FA9 /* InfoViewController.swift */,
 				20E552991FA523630018A5D0 /* QuestionViewController.swift */,
-				20E5529B1FA5408B0018A5D0 /* ResultViewController.swift */,
 				2023B9001FA42ECE00AEA52F /* Main.storyboard */,
 				2053220D1FA4643700683CBD /* herediscope font.png */,
 				205321FC1FA44F1700683CBD /* logo.png */,
@@ -170,7 +170,6 @@
 				205322061FA456CC00683CBD /* Enums */,
 				20E5528F1FA4C8B80018A5D0 /* SwiftyJson.swift */,
 				2053220B1FA462F500683CBD /* phenotypes.json */,
-				8ECF42951FA55F7C00549FA9 /* InfoViewController.swift */,
 			);
 			path = Herediscope;
 			sourceTree = "<group>";
@@ -359,7 +358,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				205322051FA4569E00683CBD /* Gender.swift in Sources */,
-				205321F71FA442F100683CBD /* Results.swift in Sources */,
 				8ECF42931FA547E400549FA9 /* ResultViewController.swift in Sources */,
 				205321FB1FA44EA300683CBD /* AutosomalDominant.swift in Sources */,
 				8ECF428B1FA547E400549FA9 /* Question.swift in Sources */,
